@@ -1,6 +1,6 @@
 # SmartService AI - Platform Pemesanan Jasa & Perbaikan Rumah Terintegrasi AI
 
-[![CI Pipeline](https://github.com/YurdikaFauzan/myjasa/actions/workflows/ci.yml/badge.svg)](https://github.com/YurdikaFauzan/myjasa/actions/workflows/ci.yml)
+[![CI Pipeline](https://github.com/YurdikaFauzan/myjasa/actions/workflows/blank.yml/badge.svg)](https://github.com/YurdikaFauzan/myjasa/actions/workflows/blank.yml)
 ![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)
 ![Architecture](https://img.shields.io/badge/Architecture-Native%20MVC-success)
@@ -243,7 +243,7 @@ vendor/bin/phpunit --testdox
 
 ## 🚀 9. Otomasi CI/CD (GitHub Actions)
 
-Alur kerja integrasi berkelanjutan dikonfigurasi melalui [.github/workflows/ci.yml](file:///d:/xampp/htdocs/Myjasagwuehhhhhhhhhhhhhhhhhhhhh/.github/workflows/ci.yml).
+Alur kerja integrasi berkelanjutan dikonfigurasi melalui [.github/workflows/blank.yml](https://github.com/YurdikaFauzan/myjasa/blob/main/.github/workflows/blank.yml).
 
 Setiap kali terjadi `git push` atau `pull request` ke branch `main`, GitHub Actions akan menjalankan langkah-langkah berikut secara otomatis di lingkungan cloud Ubuntu:
 1. Melakukan checkout source code terbaru.
