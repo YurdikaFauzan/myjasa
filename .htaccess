@@ -1,0 +1,13 @@
+Options -MultiViews -Indexes
+
+RewriteEngine On
+
+# Set base path untuk subfolder XAMPP
+RewriteBase /Myjasagwuehhhhhhhhhhhhhhhhhhhhh/
+
+# Jika request adalah file atau direktori yang ada, biarkan Apache serve langsung
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect semua request lainnya ke index.php (Front Controller)
+RewriteRule ^ index.php [QSA,L]

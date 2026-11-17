@@ -1,0 +1,1101 @@
+:root {
+    --primary-color: #9c5f34;
+    --primary-hover: #834e28;
+    --primary-rgb: 156, 95, 52;
+    --secondary-color: #2b1f18;
+    --accent-color: #c47735;
+    --accent-hover: #a86228;
+    --bg-light: #faf5ee;
+    --bg-cream: #f6efe6;
+    --card-bg: #ffffff;
+    --text-main: #2b1f18;
+    --text-muted: #79665a;
+    --border-color: #ebdcd0;
+    --border-focus: #cfa98e;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow-sm: 0 4px 12px rgba(139, 90, 43, 0.05);
+    --shadow-md: 0 10px 28px rgba(139, 90, 43, 0.10);
+    --shadow-hover: 0 16px 36px rgba(156, 95, 52, 0.18);
+
+    /* Bootstrap 5 Theme Variable Overrides */
+    --bs-primary: #9c5f34;
+    --bs-primary-rgb: 156, 95, 52;
+    --bs-link-color: #9c5f34;
+    --bs-link-hover-color: #834e28;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(254, 251, 247, 0.38), rgba(247, 239, 230, 0.58)),
+        url('../images/appliances-cartoon-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto, 480px auto;
+    background-attachment: fixed;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Bootstrap Component Overrides for Light Brown & White Theme */
+.btn-primary {
+    background: linear-gradient(135deg, #9c5f34 0%, #b37340 100%) !important;
+    border-color: #9c5f34 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(156, 95, 52, 0.25);
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: linear-gradient(135deg, #834e28 0%, #9c5f34 100%) !important;
+    border-color: #834e28 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(156, 95, 52, 0.35);
+}
+
+.btn-outline-primary {
+    color: #9c5f34 !important;
+    border-color: #9c5f34 !important;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    background-color: #9c5f34 !important;
+    border-color: #9c5f34 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(156, 95, 52, 0.2);
+}
+
+.btn-light.text-primary {
+    color: #9c5f34 !important;
+    background: #ffffff !important;
+}
+
+.btn-light.text-primary:hover {
+    background: #f7eee6 !important;
+    color: #834e28 !important;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #9c5f34 0%, #ba7640 100%) !important;
+    color: #ffffff !important;
+}
+
+.text-primary {
+    color: #9c5f34 !important;
+}
+
+.border-primary {
+    border-color: #9c5f34 !important;
+}
+
+.bg-primary-subtle {
+    background-color: #f7ede4 !important;
+    color: #834e28 !important;
+}
+
+.border-primary-subtle {
+    border-color: #ebd5c2 !important;
+}
+
+.alert-primary {
+    background-color: #f8eee5 !important;
+    border-color: #ebd5c2 !important;
+    color: #6d3e1d !important;
+}
+
+.badge.bg-primary {
+    background: #9c5f34 !important;
+    color: #ffffff !important;
+}
+
+.badge.bg-primary-subtle {
+    background-color: #f7ede4 !important;
+    color: #834e28 !important;
+    border: 1px solid #ebd5c2 !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #9c5f34 !important;
+    color: #ffffff !important;
+}
+
+.nav-pills .nav-link {
+    color: var(--text-muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 0.25rem rgba(156, 95, 52, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: #9c5f34;
+    border-color: #9c5f34;
+}
+
+.spinner-border.text-primary {
+    color: #9c5f34 !important;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #9c5f34 !important;
+    border-color: #9c5f34 !important;
+    color: #ffffff !important;
+}
+
+.pagination .page-link {
+    color: #9c5f34;
+}
+
+/* Card Styling */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Navbar Custom Styling */
+.navbar-custom {
+    background: rgba(255, 253, 250, 0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(235, 220, 208, 0.8);
+    box-shadow: 0 2px 10px rgba(139, 90, 43, 0.05);
+    z-index: 1030;
+}
+
+.navbar-brand-text {
+    font-weight: 800;
+    font-size: 1.35rem;
+    background: linear-gradient(135deg, #8a4f27 0%, #c47735 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand .bg-primary {
+    background: linear-gradient(135deg, #9c5f34 0%, #c47735 100%) !important;
+    box-shadow: 0 3px 8px rgba(156, 95, 52, 0.3);
+}
+
+/* Dashboard Sidebar Styling */
+.sidebar-custom {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    min-height: calc(100vh - 100px);
+}
+
+.sidebar-custom .nav-link {
+    color: #635044;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-custom .nav-link:hover {
+    background: #f7eee6;
+    color: var(--primary-color);
+}
+
+.sidebar-custom .nav-link.active {
+    background: linear-gradient(135deg, rgba(156, 95, 52, 0.12) 0%, rgba(196, 119, 53, 0.06) 100%);
+    color: var(--primary-color);
+    font-weight: 700;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 60px 0;
+    background: radial-gradient(circle at 10% 20%, rgba(156, 95, 52, 0.08) 0%, rgba(196, 119, 53, 0.04) 90%);
+}
+
+.hero-title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #8a4f27 0%, #c47735 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Dashboard Stat Cards */
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card.border-primary {
+    border-left: 4px solid var(--primary-color) !important;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Role Card Component */
+.role-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 30px 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(156, 95, 52, 0.35);
+}
+
+.role-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    background: rgba(156, 95, 52, 0.1);
+    color: var(--primary-color);
+}
+
+/* Appliance Category Badge */
+.appliance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.appliance-badge:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    background: #fdfaf6;
+}
+
+/* Footer Custom */
+.footer-custom {
+    background: #261a13;
+    color: #b3a297;
+    padding: 32px 0;
+    margin-top: auto;
+    border-top: 2px solid #443126;
+}
+
+.footer-custom strong {
+    color: #f3e9e2;
+}
+
+.footer-custom a {
+    color: #d1c1b7;
+    text-decoration: none;
+}
+
+.footer-custom a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Table Wrapper */
+.table-responsive-custom {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+/* Floating Chatbot Widget CSS */
+.chatbot-widget-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1050;
+    font-family: 'Inter', sans-serif;
+}
+
+.chatbot-toggle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9c5f34 0%, #c47735 100%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(156, 95, 52, 0.35);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    animation: chatbotPulse 3.5s infinite ease-in-out;
+}
+
+@keyframes chatbotPulse {
+    0%, 100% {
+        box-shadow: 0 8px 24px rgba(156, 95, 52, 0.35);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 12px 30px rgba(156, 95, 52, 0.6), 0 0 0 10px rgba(156, 95, 52, 0.14);
+        transform: scale(1.05);
+    }
+}
+
+.chatbot-toggle-btn:hover {
+    animation: none;
+    transform: scale(1.15) rotate(6deg);
+    box-shadow: 0 14px 34px rgba(156, 95, 52, 0.5) !important;
+}
+
+.chatbot-window {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 350px;
+    max-width: calc(100vw - 40px);
+    height: 450px;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 16px 40px rgba(139, 90, 43, 0.2);
+    transform-origin: bottom right;
+    animation: chatPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes chatPop {
+    0% { transform: scale(0.4) translateY(40px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.chatbot-header {
+    background: linear-gradient(135deg, #9c5f34 0%, #c47735 100%);
+    color: white;
+    padding: 12px 16px;
+    position: relative;
+    z-index: 10;
+}
+
+.chatbot-header .dropdown-menu {
+    z-index: 1055 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.chatbot-header .dropdown-item.active {
+    background-color: rgba(156, 95, 52, 0.12);
+    color: #9c5f34 !important;
+    font-weight: 600;
+}
+
+.chatbot-header .dropdown-item:hover {
+    background-color: #f8fafc;
+}
+
+.chatbot-model-bar {
+    background: #faf6f0;
+    border-bottom: 1px solid #ebdccc;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #fdfaf6;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chat-message {
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message.user-message {
+    align-self: flex-end;
+    animation: chatMsgRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.chat-message.ai-message {
+    align-self: flex-start;
+    animation: chatMsgLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes chatMsgLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-16px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes chatMsgRight {
+    from {
+        opacity: 0;
+        transform: translateX(16px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.message-content {
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    transition: transform 0.2s ease;
+}
+
+.user-message .message-content {
+    background: linear-gradient(135deg, #9c5f34 0%, #ba7640 100%);
+    color: white;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 2px 8px rgba(156, 95, 52, 0.2);
+}
+
+.ai-message .message-content {
+    background: white;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.chatbot-input-area {
+    padding: 15px;
+    background: white;
+    border-top: 1px solid var(--border-color);
+}
+
+.chatbot-input-area input {
+    border-radius: 20px;
+    padding-left: 15px;
+    border-color: var(--border-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* =========================================================
+   ANIMASI DAN TRANSISI MODERN (DYNAMICS & MICRO-INTERACTIONS)
+   ========================================================= */
+
+/* 1. Page Entrance Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.stat-card,
+.role-card,
+.sidebar-custom,
+.hero-section {
+    animation: fadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered Delay for Grid Cards */
+.row > div:nth-child(1) .stat-card,
+.row > div:nth-child(1) .role-card { animation-delay: 0.06s; }
+.row > div:nth-child(2) .stat-card,
+.row > div:nth-child(2) .role-card { animation-delay: 0.12s; }
+.row > div:nth-child(3) .stat-card,
+.row > div:nth-child(3) .role-card { animation-delay: 0.18s; }
+.row > div:nth-child(4) .stat-card,
+.row > div:nth-child(4) .role-card { animation-delay: 0.24s; }
+
+/* 2. Shimmer Light Effect on Hero Banner */
+.card.bg-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.card.bg-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -70%;
+    width: 45%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.18) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    animation: bannerShimmer 7s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes bannerShimmer {
+    0% { left: -70%; }
+    30% { left: 140%; }
+    100% { left: 140%; }
+}
+
+/* 3. Stat Card Hover Elevation & Icon Dynamics */
+.stat-card {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease,
+                border-color 0.3s ease !important;
+}
+
+.stat-card:hover {
+    transform: translateY(-7px) scale(1.015);
+    box-shadow: 0 16px 36px rgba(156, 95, 52, 0.15) !important;
+}
+
+.stat-card .stat-icon {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.18) rotate(8deg);
+}
+
+/* 4. Action Cards (#pesan-jasa & #konsultasi-ai) Hover Lift */
+#pesan-jasa .card,
+#konsultasi-ai .card {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+}
+
+#pesan-jasa .card:hover,
+#konsultasi-ai .card:hover {
+    transform: translateY(-7px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(156, 95, 52, 0.2) !important;
+}
+
+/* 5. Button Click Micro-Feedback (Tactile Press) */
+.btn {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.2s ease,
+                background-color 0.2s ease !important;
+}
+
+.btn:active {
+    transform: scale(0.95) !important;
+}
+
+/* 6. Floating Animation for Decorative Elements */
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.navbar-brand .bg-primary {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-brand:hover .bg-primary {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+/* 7. Category Appliance Badges Interactive Bounce */
+.appliance-badge {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.25s ease,
+                border-color 0.25s ease !important;
+}
+
+.appliance-badge:hover {
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 8px 18px rgba(156, 95, 52, 0.16) !important;
+}
+
+.appliance-badge i {
+    transition: transform 0.25s ease;
+    display: inline-block;
+}
+
+.appliance-badge:hover i {
+    transform: scale(1.25);
+}
+
+/* 8. Table Hover Micro-Effect */
+.table-hover tbody tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #faf2ea !important;
+    transform: scale(1.002);
+}
+
+/* =========================================================
+   FLOATING TECHNICIAN ROBOT MASCOT (POJOK KIRI BAWAH)
+   ========================================================= */
+.technician-robot-widget {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1045;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.technician-robot-widget:hover {
+    transform: scale(1.08);
+}
+
+/* 1. Badan Naik-Turun: seperti sedang bernapas (± 3 detik per loop) */
+@keyframes robotFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    27% { /* 0.8s */
+        transform: translateY(-5px);
+    }
+    53% { /* 1.6s - Apex Waving & Winking */
+        transform: translateY(-12px);
+    }
+    80% { /* 2.4s */
+        transform: translateY(-5px);
+    }
+}
+
+.robot-float-group {
+    animation: robotFloat 3.0s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Ground Hover Shadow Dynamic Scaling (Sinkron 3.0 detik) */
+@keyframes robotGroundShadow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.22;
+    }
+    53% { /* Saat robot di puncak 1.6s */
+        transform: scale(0.72);
+        opacity: 0.11;
+    }
+}
+
+.robot-ground-shadow {
+    transform-origin: 80px 198px;
+    animation: robotGroundShadow 3.0s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+/* 2. Mata Berkedip: setiap beberapa detik secara natural (Kedip & Wink di Frame 3 / 1.6s) */
+.robot-eye-left {
+    transform-origin: 64px 53px;
+    animation: robotLeftEyeBlink 3.0s ease-in-out infinite;
+}
+
+@keyframes robotLeftEyeBlink {
+    0%, 46% {
+        transform: scaleY(1);
+    }
+    50%, 56% {
+        transform: scaleY(0.15);
+    }
+    60%, 100% {
+        transform: scaleY(1);
+    }
+}
+
+.robot-eye-right-normal {
+    transform-origin: 96px 53px;
+    animation: robotRightEyeNormal 3.0s ease-in-out infinite;
+}
+
+@keyframes robotRightEyeNormal {
+    0%, 45% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    48%, 58% {
+        opacity: 0;
+        transform: scaleY(0.15);
+    }
+    61%, 100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.robot-eye-right-wink {
+    transform-origin: 96px 56px;
+    opacity: 0;
+    animation: robotRightEyeWink 3.0s ease-in-out infinite;
+}
+
+@keyframes robotRightEyeWink {
+    0%, 46% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    49%, 57% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+    60%, 100% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+}
+
+/* 3. Tangan Melambai: sesekali dengan gerakan kecil dan halus (Frame 1 -> Frame 5) */
+.robot-right-arm {
+    transform-origin: 108px 104px;
+    animation: robotWaveArm 3.0s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    will-change: transform;
+}
+
+@keyframes robotWaveArm {
+    0%, 18% { /* Frame 1: 0.0s - 0.5s Posisi netral santai di samping */
+        transform: rotate(0deg);
+    }
+    27% { /* Frame 2: 0.8s Mengangkat tangan ke atas */
+        transform: rotate(-32deg);
+    }
+    45% { /* 1.35s Tiba di posisi melambai */
+        transform: rotate(-65deg);
+    }
+    51% { /* Frame 3: 1.55s Melambai halus ke luar */
+        transform: rotate(-50deg);
+    }
+    57% { /* Frame 3: 1.70s Melambai ke dalam */
+        transform: rotate(-65deg);
+    }
+    63% { /* Frame 3: 1.90s Ayunan kecil */
+        transform: rotate(-53deg);
+    }
+    78% { /* Frame 4: 2.35s Menurunkan tangan perlahan */
+        transform: rotate(-24deg);
+    }
+    88%, 100% { /* Frame 5: 3.0s Kembali rileks di samping */
+        transform: rotate(0deg);
+    }
+}
+
+/* Tangan Kiri: Gerakan napas lembut idle */
+.robot-left-arm {
+    transform-origin: 54px 104px;
+    animation: robotLeftArmIdle 3.0s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes robotLeftArmIdle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    53% {
+        transform: rotate(4deg);
+    }
+}
+
+/* 4. Tanpa Cahaya: Tidak ada glow, tidak ada cahaya neon pada antena */
+.robot-antenna-bulb {
+    /* Solid shaded spherical finish - no glow filter or flashing */
+    filter: none !important;
+}
+
+/* Semburan Pendorong Bawah (Thruster Flame Pulse) */
+@keyframes robotThrusterPulse {
+    0%, 100% {
+        transform: scaleY(1) scaleX(1);
+        opacity: 0.85;
+    }
+    50% {
+        transform: scaleY(1.25) scaleX(0.88);
+        opacity: 1;
+    }
+}
+
+.robot-thruster-flame {
+    transform-origin: 80px 150px;
+    animation: robotThrusterPulse 0.75s ease-in-out infinite;
+}
+
+/* 5. Loop Terus-Menerus: Speech Bubble sinkron dengan breathing */
+.robot-speech-bubble {
+    background: #ffffff;
+    color: #2b1f18;
+    border: 1.5px solid #ebdcd0;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    box-shadow: 0 4px 14px rgba(110, 60, 27, 0.10);
+    position: relative;
+    animation: bubbleFloat 3.0s ease-in-out infinite;
+    white-space: nowrap;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.robot-speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ffffff;
+}
+
+@keyframes bubbleFloat {
+    0%, 100% { transform: translateY(0); }
+    53% { transform: translateY(-6px); }
+}
+
+/* Responsive Scaling for Mobile Screens */
+@media (max-width: 768px) {
+    .technician-robot-widget {
+        bottom: 15px;
+        left: 12px;
+        transform: scale(0.8);
+        transform-origin: bottom left;
+    }
+    .technician-robot-widget:hover {
+        transform: scale(0.86);
+    }
+}
+
+/* =========================================================================
+   Dashboard Content & Sidebar Styling Enhancements
+   ========================================================================= */
+.sidebar-custom {
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 6px 20px rgba(139, 90, 43, 0.07);
+    position: sticky;
+    top: 80px;
+}
+
+.sidebar-custom .nav-link {
+    color: var(--text-main);
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 3px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-custom .nav-link:hover {
+    background-color: #f7eee6;
+    color: var(--primary-color);
+    transform: translateX(2px);
+}
+
+.sidebar-custom .nav-link.active {
+    background: linear-gradient(135deg, rgba(156, 95, 52, 0.12) 0%, rgba(186, 118, 64, 0.08) 100%);
+    color: var(--primary-color);
+    font-weight: 700;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Dashboard Content Cards */
+.card {
+    border-color: var(--border-color) !important;
+}
+
+.card.shadow-sm {
+    box-shadow: 0 6px 20px rgba(139, 90, 43, 0.08) !important;
+}
+
+.stat-card {
+    background-color: #ffffff !important;
+    border: 1.5px solid var(--border-color) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 6px 18px rgba(139, 90, 43, 0.07) !important;
+}
+
+/* =========================================================================
+   Customer Horizontal Sub-Navbar (Jasaku Theme)
+   ========================================================================= */
+.customer-subnav {
+    background: linear-gradient(135deg, #A06138 0%, #8A4F27 100%);
+    box-shadow: 0 4px 14px rgba(109, 61, 31, 0.16);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    position: sticky;
+    top: 56px;
+    z-index: 1010;
+    padding: 8px 0;
+}
+
+.customer-subnav-inner {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 8px;
+    padding: 2px 0;
+}
+
+.customer-subnav-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.customer-nav-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 22px;
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    border-radius: 999px;
+    transition: all 0.22s ease;
+    flex-shrink: 0;
+}
+
+.customer-nav-item:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-1px);
+}
+
+.customer-nav-item.active {
+    background: #FFFFFF;
+    color: #743E1F !important;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+.customer-nav-item.active i {
+    color: #9C5F34;
+}
+
+.customer-nav-divider {
+    width: 1px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+    margin: 0 6px;
+}
+
+/* User Profile Badge in Main Navbar */
+.user-profile-badge {
+    color: #351D0E;
+    border: 1px solid #E2D6CA !important;
+    background: #FFFFFF !important;
+    font-size: 0.88rem;
+}
+
+@media (max-width: 991.98px) {
+    .customer-subnav {
+        top: 60px;
+        padding: 6px 0;
+    }
+    .customer-subnav-inner {
+        padding: 4px 12px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .customer-nav-item {
+        padding: 6px 16px;
+        font-size: 0.86rem;
+    }
+    .customer-nav-divider {
+        height: 18px;
+        margin: 0 4px;
+    }
+}
+
+
+
+
