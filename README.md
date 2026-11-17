@@ -120,11 +120,9 @@ SmartService AI mengimplementasikan modul kecerdasan buatan (*Generative AI & LL
 ## 📹 6. Link Video Demonstrasi Aplikasi
 
 Tonton video demonstrasi lengkap alur kerja aplikasi SmartService AI dan implementasi CI/CD GitHub Actions pada tautan berikut:
+https://youtu.be/xWbqXp7IvIA
 
-[![Tonton Video Demonstrasi](https://img.shields.io/badge/YouTube-Demonstrasi%20Aplikasi%20%26%20CI%2FCD-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=PLACEHOLDER_LINK_VIDEO_UAS)
 
-> 🔗 **Tautan YouTube**: `https://www.youtube.com/watch?v=PLACEHOLDER_LINK_VIDEO_UAS`  
-> *(Silakan ganti URL di atas dengan tautan video presentasi YouTube kelompok Anda).*
 
 ---
 
