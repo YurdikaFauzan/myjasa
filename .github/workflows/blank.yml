@@ -1,36 +1,48 @@
-# This is a basic workflow to help you get started with Actions
+name: SmartService AI - CI Pipeline
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build-and-test:
+    name: Build, Lint & Unit Test
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+      APP_ENV: testing
+      APP_KEY: SmartServiceAI_Secret_Key_Testing_2026
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: 2. Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, pdo, pdo_sqlite, openssl, json, tokenizer
+          tools: composer:v2
+          coverage: none
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: 3. Verify PHP Version
+        run: php -v
+
+      - name: 4. Validate Composer Configuration
+        run: composer validate --strict
+
+      - name: 5. Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: 6. PHP Syntax Check (Lint)
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "Memeriksa sintaks PHP pada semua file project..."
+          find . -type f -name "*.php" ! -path "./vendor/*" ! -path "./scratch/*" -print0 | xargs -0 -n 1 -P 4 php -l
+
+      - name: 7. Run PHPUnit Test Suite
+        run: vendor/bin/phpunit --testdox
+
+      - name: 8. Run Standalone Test Runner Verification
+        run: php tests/run_tests.php
